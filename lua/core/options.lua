@@ -51,3 +51,5 @@ vim.o.winborder = 'rounded'
 vim.o.scrolloff = 10
 
 vim.opt.whichwrap:append '<>[]hl'
+
+vim.o.splitright = true
