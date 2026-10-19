@@ -29,7 +29,7 @@ vim.o.smartcase = true
 vim.o.list = true
 
 vim.o.fillchars = {
-    eob = ' ', -- stops the '~' at the end of the file
+  eob = ' ', -- stops the '~' at the end of the file
 }
 
 vim.opt.listchars = {
@@ -53,3 +53,5 @@ vim.o.scrolloff = 10
 vim.opt.whichwrap:append '<>[]hl'
 
 vim.o.splitright = true
+
+vim.o.termguicolors = true
