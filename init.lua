@@ -1,5 +1,0 @@
-require 'core.options'
-require 'core.lazy'
-require 'core.keymap'
-require 'core.autocommands'
-require 'core.persistent_colorscheme'
