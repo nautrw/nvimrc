@@ -2,3 +2,4 @@ tags
 test.sh
 nvim
 .DS_Store
+persistent_colorscheme.lua
