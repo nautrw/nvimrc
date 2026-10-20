@@ -23,9 +23,9 @@ return {
                     shorting_target = 75
                 },
             },
-            lualine_x = { "encoding", "fileformat", "filetype" },
+            lualine_x = { "filesize", "filetype" },
             lualine_y = { "lsp_status" },
-            lualine_z = { "location", "progress" },
+            lualine_z = { "searchcount", "location", "progress" },
         }
     }
 }
