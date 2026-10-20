@@ -41,6 +41,32 @@ local function get_unwanted_colorschemes()
     return unwanted_cache
 end
 
+local function exclude_colorscheme(name)
+    local path = vim.fs.joinpath(
+        vim.fn.stdpath("config"),
+        "lua",
+        "pickers",
+        "unwanted_colorschemes.txt"
+    )
+
+    vim.fn.mkdir(vim.fs.dirname(path), "p")
+
+    local file, err = io.open(path, "a")
+    if not file then
+        vim.notify(
+            "Failed to exclude colorscheme " .. name .. ": " .. tostring(err),
+            vim.log.levels.ERROR
+        )
+        return
+    end
+
+    file:write(name, "\n")
+    file:close()
+
+    unwanted_cache = nil
+
+    vim.notify("Excluded colorscheme: " ..name, vim.log.levels.INFO)
+end
 
 function M.get_filtered_colorschemes()
     local unfiltered_list = vim.fn.getcompletion('', 'color')
@@ -133,6 +159,36 @@ end]])
                 local _, _ = pcall(function() vim.cmd.colorscheme(item.text) end)
             end)
         end,
+        actions = {
+            exclude_colorscheme = function(picker)
+                local item = picker:current()
+                if not item then
+                    return
+                end
+
+                exclude_colorscheme(item.text)
+
+                for i, entry in ipairs(picker.list.items) do
+                    if entry.text == item.text then
+                        table.remove(picker.list.items, i)
+                        break
+                    end
+                end
+
+                picker.list:update({force = true})
+            end,
+        },
+        win = {
+            input = {
+                keys = {
+                    ["<C-x>"] = {
+                        "exclude_colorscheme",
+                        mode = { "n", "i" },
+                        desc = "Exclude colorscheme",
+                    },
+                },
+            },
+        },
     }
 end
 

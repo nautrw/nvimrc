@@ -26,3 +26,10 @@ vim
 wildcharm
 zaibatsu
 zeller
+zellner
+ember-light
+ember-lighter
+dawnfox
+dayfox
+themes
+dracula
