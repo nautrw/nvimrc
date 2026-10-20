@@ -1,4 +1,5 @@
 vim.api.nvim_create_autocmd('User', {
+      desc = 'Enable preview on oil automatically',
       pattern = 'OilEnter',
       callback = vim.schedule_wrap(function(args)
         local oil = require('oil')
@@ -9,12 +10,18 @@ vim.api.nvim_create_autocmd('User', {
       end),
     })
 
--- make help menu go on vsplit right
 vim.api.nvim_create_autocmd("BufWinEnter", {
+    desc = 'Make help menu go on vertical split',
     pattern = { "*.txt" },
     callback = function()
         if vim.bo.filetype == "help" then
             vim.cmd.wincmd("L")
         end
     end
-})   
+})
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight when yanking text',
+    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+    callback = function() vim.highlight.hl_op() end,
+})
