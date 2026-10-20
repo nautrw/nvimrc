@@ -17,8 +17,14 @@ return {
           { icon = "", key = "c", desc = "Open Configuration", action = ":lua Snacks.dashboard.pick('files', { cwd = vim.fn.stdpath('config') })" },
           { icon = "󰒲", key = "L", desc = "Open Lazy", action = ":Lazy" },
           { icon = "󰈆", key = "q", desc = "Exit Neovim", action = ":qa" }
-        }
+        },
       },
+      sections = {
+        { section = 'header', padding = 1},
+        { section = 'startup', padding = 1 },
+        { icon = '󰌌', title = 'Quick Actions', section = 'keys', indent = 2, padding = 1 },
+        { icon = '', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1},
+      }
     },
     explorer = { enabled = true },
     indent = { enabled = true },
