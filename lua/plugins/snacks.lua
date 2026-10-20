@@ -121,6 +121,15 @@ return {
         style = "terminal",
       },
     },
+    toggle = {
+      map = vim.keymap.set,
+      which_key = true,
+      notify = true,
+      icon = {
+        enabled = "󰔡",
+        disabled = "󰨙"
+      }
+    }
   },
   keys = {
     -- Top Pickers & Explorer
