@@ -49,10 +49,3 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Focus window to the left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Focus window below" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Focus window above" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Focus window to the right" })
-
-vim.keymap.set(
-  "n",
-  "<leader>th",
-  function() require("pickers.colorscheme_picker").picker() end,
-  { desc = "Colorscheme picker" }
-)
