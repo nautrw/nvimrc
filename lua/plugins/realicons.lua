@@ -6,6 +6,7 @@ return {
     integrations = {
       oil = true,
       snacks_picker = true,
+      lualine = true
     },
   },
 }
