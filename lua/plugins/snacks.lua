@@ -35,7 +35,7 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  dependencies = { "Mirsmog/real-icons.nvim" },
+  dependencies = { "nautrw/real-icons.nvim" },
   ---@type snacks.Config
   opts = {
     bigfile = {

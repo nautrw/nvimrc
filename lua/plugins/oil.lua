@@ -3,7 +3,7 @@ return {
   lazy = true,
   ---@module 'oil'
   ---@type oil.SetupOpts
-  dependencies = { "Mirsmog/real-icons.nvim" },
+  dependencies = { "nautrw/real-icons.nvim" },
   cmd = "Oil",
   keys = {
     { "<leader>e", "<cmd>Oil<CR>", desc = "Open Oil file explorer" },

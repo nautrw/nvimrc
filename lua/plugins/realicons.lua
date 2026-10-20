@@ -1,5 +1,5 @@
 return {
-  "Mirsmog/real-icons.nvim",
+  "nautrw/real-icons.nvim",
   build = ":RealIcons install",
   cmd = "RealIcons",
   opts = {

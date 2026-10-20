@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    dependencies = { "Mirsmog/real-icons.nvim" },
+    dependencies = { "nautrw/real-icons.nvim" },
     opts = {
         options = {
             icons_enabled = true,
@@ -12,14 +12,20 @@ return {
             },
             always_show_tabline = false,
             globalstatus = true,
+        },
+        sections = {
+            lualine_a = { 'mode' },
+            lualine_b = { 'branch', 'diff', 'diagnostics' },
+            lualine_c = {
+                {
+                    "filename",
+                    path = 1,
+                    shorting_target = 75
+                },
             },
-            sections = {
-                lualine_a = { 'mode' },
-                lualine_b = { 'branch', 'diff', 'diagnostics' },
-                lualine_c = {"filename"},
-                lualine_x = {"encoding", "fileformat", "filetype"},
-                lualine_y = {},
-                lualine_z = {"location", "progress"},
-            }
+            lualine_x = { "encoding", "fileformat", "filetype" },
+            lualine_y = {},
+            lualine_z = { "location", "progress" },
+        }
     }
 }
