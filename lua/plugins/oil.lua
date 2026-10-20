@@ -18,5 +18,8 @@ return {
     preview_win = {
       disable_preview = function(filename) return vim.fn.getfsize(filename) > 1024 * 1000 end,
     },
+    view_options = {
+      show_hidden = true,
+    }
   },
 }
