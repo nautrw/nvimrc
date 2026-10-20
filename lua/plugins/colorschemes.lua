@@ -7,5 +7,4 @@ return {
   "Mofiqul/vscode.nvim",
   "EdenEast/nightfox.nvim",
   "Aejkatappaja/cendre",
-  "navarasu/onedark.nvim",
 }
