@@ -3,9 +3,9 @@ return {
   build = ":RealIcons install",
   cmd = "RealIcons",
   opts = {
-      integrations = {
-          oil = true,
-          snacks_picker = true
-      }
+    integrations = {
+      oil = true,
+      snacks_picker = true,
+    },
   },
 }

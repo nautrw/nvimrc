@@ -1,5 +1,5 @@
 return {
-  'nemanjamalesija/smart-paste.nvim',
+  "nemanjamalesija/smart-paste.nvim",
   event = "VeryLazy",
   config = true,
 }

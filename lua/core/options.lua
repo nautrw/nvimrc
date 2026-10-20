@@ -1,11 +1,11 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.signcolumn = 'auto' -- the gutter
+vim.o.signcolumn = "auto" -- the gutter
 
-vim.o.mouse = 'a' -- enables mouse in all modes
+vim.o.mouse = "a" -- enables mouse in all modes
 
 vim.o.expandtab = true
 vim.o.smartindent = true
@@ -29,13 +29,13 @@ vim.o.smartcase = true
 vim.o.list = true
 
 vim.o.fillchars = {
-  eob = ' ', -- stops the '~' at the end of the file
+  eob = " ", -- stops the '~' at the end of the file
 }
 
 vim.opt.listchars = {
-  tab = '» ',
-  trail = '·',
-  nbsp = '␣', -- U+202F
+  tab = "» ",
+  trail = "·",
+  nbsp = "␣", -- U+202F
 }
 
 vim.o.cursorline = true
@@ -45,12 +45,12 @@ vim.o.confirm = true
 
 vim.o.laststatus = 3 -- universal statusline
 
-vim.o.winborder = 'rounded'
+vim.o.winborder = "rounded"
 
 -- keep an amount of lines above or below the cursor
 vim.o.scrolloff = 10
 
-vim.opt.whichwrap:append '<>[]hl'
+vim.opt.whichwrap:append "<>[]hl"
 
 vim.o.splitright = true
 
