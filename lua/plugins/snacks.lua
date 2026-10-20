@@ -104,6 +104,12 @@ return {
     picker = {
       enabled = true,
       prompt = " ",
+      sources = {
+        files = {
+          hidden = true,
+          ignored = false,
+        },
+      },
     },
     quickfile = { enabled = true },
     scope = { enabled = true },
