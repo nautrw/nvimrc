@@ -1,6 +1,7 @@
 {
   "base16-unthemed-nvim": { "branch": "master", "commit": "607171d182b9c452069233693ac8ed36491f57b8" },
   "cendre": { "branch": "main", "commit": "5c9d924a4c75c130a1c812ee3e240d78a92d2c3a" },
+  "conform.nvim": { "branch": "master", "commit": "016802de402556da54c36bd7359b441266b01cdd" },
   "darcula-dark.nvim": { "branch": "main", "commit": "e4a407f37a2a6d7d01c66cc54a569edccad81592" },
   "embark": { "branch": "main", "commit": "2331671b548abcade22b0197fde58e11744c99bb" },
   "ember": { "branch": "main", "commit": "6f8ca3d0f228fbd61e5aeeb5c68343c410720873" },
