@@ -24,7 +24,7 @@ return {
                 },
             },
             lualine_x = { "encoding", "fileformat", "filetype" },
-            lualine_y = {},
+            lualine_y = { "lsp_status" },
             lualine_z = { "location", "progress" },
         }
     }

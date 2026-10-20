@@ -1,26 +1,7 @@
 return {
   {
-    'williamboman/mason.nvim',
-    dependencies = {
-      {
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
-        opts = {
-          ensure_installed = {
-            'ty',
-            'ruff',
-            'lua-language-server',
-            'stylua',
-            'xmlformatter',
-            'typescript-language-server',
-            'prettier',
-            'clangd',
-            'clang-format',
-            'codelldb',
-            "shfmt"
-          },
-        },
-      },
-    },
+    "mason-org/mason.nvim",
+    cmd = "Mason",
     opts = {
       ui = {
         icons = {
@@ -32,13 +13,33 @@ return {
     },
   },
   {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    build = ":MasonInstallAll",
+    dependencies = {
+      "mason-org/mason.nvim",
+    },
+    opts = {
+      ensure_installed = {
+        "ty",
+        "ruff",
+        "lua-language-server",
+        "stylua",
+        "xmlformatter",
+        "typescript-language-server",
+        "prettier",
+        "clangd",
+        "clang-format",
+        "codelldb",
+        "shfmt",
+      },
+    },
+  },
+  {
     "mason-org/mason-lspconfig.nvim",
     dependencies = {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
     },
-    opts = {
-      automatic_enable = true,
-    },
-  }
+    opts = {},
+  },
 }
