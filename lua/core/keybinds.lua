@@ -45,6 +45,11 @@ vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Focus window to the left" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Focus window below" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Focus window above" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Focus window to the right" })
+
 vim.keymap.set(
   "n",
   "<leader>th",
