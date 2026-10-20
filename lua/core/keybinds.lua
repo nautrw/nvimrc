@@ -53,8 +53,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Focus window to the right" })
 vim.keymap.set(
   "n",
   "<leader>th",
-  function()
-    require('pickers.colorscheme_picker').picker()
-  end,
+  function() require("pickers.colorscheme_picker").picker() end,
   { desc = "Colorscheme picker" }
 )

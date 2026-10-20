@@ -127,9 +127,9 @@ return {
       notify = true,
       icon = {
         enabled = "󰔡",
-        disabled = "󰨙"
-      }
-    }
+        disabled = "󰨙",
+      },
+    },
   },
   keys = {
     -- Top Pickers & Explorer
