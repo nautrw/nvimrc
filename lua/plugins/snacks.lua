@@ -26,14 +26,17 @@ return {
         { icon = '', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1},
       }
     },
-    explorer = { enabled = true },
+    explorer = { enabled = false },
     indent = { enabled = true },
     input = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 3000,
     },
-    picker = { enabled = true },
+    picker = { 
+      enabled = true,
+      prompt = " " 
+    },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },
