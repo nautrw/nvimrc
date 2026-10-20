@@ -77,7 +77,6 @@ return {
       },
       sections = {
         { section = 'header', padding = 1},
-        { section = 'startup', padding = 1 },
         { icon = '󰌌', title = 'Quick Actions', section = 'keys', indent = 2, padding = 1 },
         { icon = '', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1},
         {
@@ -92,7 +91,8 @@ return {
           padding = 1,
           ttl = 5 * 60,
           indent = 2
-        }
+        },
+        { section = 'startup', padding = 1 },
       }
     },
     explorer = { enabled = false },
