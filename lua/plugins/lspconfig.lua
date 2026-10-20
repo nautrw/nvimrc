@@ -4,8 +4,8 @@ return {
     event = {"BufReadPre", "BufNewFile"},
     cmd = {"LspInfo", "LspInstall", "LspUninstall"},
     dependencies = {
-      { 'mason-org/mason-lspconfig.nvim' },
-      { 'j-hui/fidget.nvim' },
+      { 'mason-org/mason-lspconfig.nvim', opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
     },
     config = function()
       vim.diagnostic.config {
