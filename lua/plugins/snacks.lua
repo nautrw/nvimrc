@@ -6,7 +6,20 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-    dashboard = { enabled = true },
+    dashboard = {
+      enabled = true,
+      preset = {
+        keys = {
+          { icon = "󰏇", key = "e", desc = "Open Oil", action = ":Oil" },
+          { icon = "", key = "f", desc = "Find Files", action = ":lua Snacks.dashboard.pick('files')" },
+          { icon = "", key = "g", desc = "Find By Grep", action = ":lua Snacks.dashboard.pick('live_grep')" },
+          { icon = "", key = "r", desc = "Find Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          { icon = "", key = "c", desc = "Open Configuration", action = ":lua Snacks.dashboard.pick('files', { cwd = vim.fn.stdpath('config') })" },
+          { icon = "󰒲", key = "L", desc = "Open Lazy", action = ":Lazy" },
+          { icon = "󰈆", key = "q", desc = "Exit Neovim", action = ":qa" }
+        }
+      },
+    },
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
