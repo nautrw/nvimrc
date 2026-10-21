@@ -4,6 +4,8 @@ local wk = require "which-key"
 wk.add {
   { "<leader>f", group = "Finders" },
   { "<leader>s", group = "Splits" },
+  { "<leader>g", group = "Git" },
+  { "<leader>u", group = "Toggles" },
   {
     "<leader>b",
     group = "buffers",

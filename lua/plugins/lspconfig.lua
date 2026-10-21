@@ -38,6 +38,6 @@ return {
     })
   end,
   keys = {
-    { "<leader>df", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" } },
+    { "<leader>df", vim.diagnostic.open_float, desc = "Show Line Diagnostics", },
   },
 }

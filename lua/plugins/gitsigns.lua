@@ -18,11 +18,12 @@ return {
     })
   end,
   keys = {
-    { '<leader>hs', '<cmd>Gitsigns stage_hunk<CR>', desc = 'Stage hunk', },
-    { '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>', desc = 'Stage buffer', },
-    { '<leader>hr', '<cmd>Gitsigns reset_hunk<CR>', desc = 'Reset hunk', },
-    { '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>', desc = 'Reset buffer', },
-    { '<leader>hd', '<cmd>Gitsigns diffthis<CR>', desc = 'View diff of hunk', },
+    -- some other git stuff is in snacks config
+    { '<leader>gs', '<cmd>Gitsigns stage_hunk<CR>', desc = 'Stage hunk', },
+    { '<leader>gS', '<cmd>Gitsigns stage_buffer<CR>', desc = 'Stage buffer', },
+    { '<leader>gr', '<cmd>Gitsigns reset_hunk<CR>', desc = 'Reset hunk', },
+    { '<leader>gR', '<cmd>Gitsigns reset_buffer<CR>', desc = 'Reset buffer', },
+    { '<leader>gd', '<cmd>Gitsigns diffthis<CR>', desc = 'View diff of hunk', },
   },
   opts = {
     signs = {
