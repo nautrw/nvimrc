@@ -49,3 +49,12 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Focus window to the left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Focus window below" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Focus window above" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Focus window to the right" })
+
+vim.keymap.set('n', '<leader>mc', function()
+  vim.api.nvim_buf_clear_namespace(
+    0,
+    vim.api.nvim_create_namespace('nvim.multicursor'),
+    0,
+    -1
+  )
+end, { desc = 'Clear multicursors' })
