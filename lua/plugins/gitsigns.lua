@@ -17,6 +17,13 @@ return {
       end,
     })
   end,
+  keys = {
+    { '<leader>hs', '<cmd>Gitsigns stage_hunk<CR>', desc = 'Stage hunk', },
+    { '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>', desc = 'Stage buffer', },
+    { '<leader>hr', '<cmd>Gitsigns reset_hunk<CR>', desc = 'Reset hunk', },
+    { '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>', desc = 'Reset buffer', },
+    { '<leader>hd', '<cmd>Gitsigns diffthis<CR>', desc = 'View diff of hunk', },
+  },
   opts = {
     signs = {
       add = { text = "┃" },
