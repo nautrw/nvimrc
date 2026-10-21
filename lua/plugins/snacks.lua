@@ -15,6 +15,12 @@ local headers = { -- NO LIMIT TO THE LARP!!!!
   "hi gng w rizz",
   "get to work brochacho",
   "WE are ALL getting hired at SlopCorp",
+  [[pneumonoultramicroscopicsilicovolcanoconiosis
+is an invented long word said to describe a lung
+disease attained by inhaling very fine ash and
+sand dust]],
+  "stay away from dihydrogen monoxide!",
+  "phenylethanolamine n-methyltransferase da goat",
   [[
   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆
    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦
@@ -27,7 +33,17 @@ local headers = { -- NO LIMIT TO THE LARP!!!!
 ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄
      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆
       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃
-  ]]
+  ]],
+  [[
+                                                                   
+      ████ ██████           █████      ██                    
+     ███████████             █████                            
+     █████████ ███████████████████ ███   ███████████  
+    █████████  ███    █████████████ █████ ██████████████  
+   █████████ ██████████ █████████ █████ █████ ████ █████  
+ ███████████ ███    ███ █████████ █████ █████ ████ █████ 
+██████  █████████████████████ ████ █████ █████ ████ ██████
+]],
 }
 
 math.randomseed(os.time())
@@ -68,7 +84,12 @@ return {
           { icon = "", key = "f", desc = "Find Files", action = ":lua Snacks.dashboard.pick('files')" },
           { icon = "", key = "g", desc = "Find By Grep", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = "", key = "r", desc = "Find Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = "", key = "t", desc = "Pick Colorscheme", action = function() require("pickers.colorscheme_picker").picker() end },
+          {
+            icon = "",
+            key = "t",
+            desc = "Pick Colorscheme",
+            action = function() require("pickers.colorscheme_picker").picker() end,
+          },
           {
             icon = "",
             key = "c",
@@ -221,7 +242,7 @@ return {
 
     { "]]", function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
     { "[[", function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
-    { "<leader>th", function() require("pickers.colorscheme_picker").picker() end, { desc = "Colorscheme Picker" } }
+    { "<leader>th", function() require("pickers.colorscheme_picker").picker() end, { desc = "Colorscheme Picker" } },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
