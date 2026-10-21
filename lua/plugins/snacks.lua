@@ -68,6 +68,7 @@ return {
           { icon = "", key = "f", desc = "Find Files", action = ":lua Snacks.dashboard.pick('files')" },
           { icon = "", key = "g", desc = "Find By Grep", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = "", key = "r", desc = "Find Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          { icon = "", key = "t", desc = "Pick Colorscheme", action = function() require("pickers.colorscheme_picker").picker() end },
           {
             icon = "",
             key = "c",
