@@ -23,7 +23,7 @@ vim.api.nvim_set_hl(0, 'WinSeparator', {
   fg = M.base03,
 })
 
-vim.api.nvim_set_hl(0, 'Comment', {
-  fg = M.base03,
+vim.api.nvim_set_hl(0, 'TSComment', {
+  fg = "#707070",
   italic = true,
 })
