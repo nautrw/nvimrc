@@ -4,10 +4,29 @@ return {
   build = function() require("blink.cmp").build():wait(60000) end,
   dependencies = { "rafamadriz/friendly-snippets", "saghen/blink.lib", "L3MON4D3/LuaSnip" },
   opts = {
+    signature = {
+      enabled = true,
+      trigger = {
+        enabled = true,
+      },
+      window = {
+        border = "rounded",
+        show_documentation = true,
+      },
+    },
     keymap = {
       preset = "super-tab",
-      ["<C-Space>"] = { "show", "show_documentation", "hide_documentation", "fallback", },
-      ["<Esc>"] = { "hide", "fallback", },
+      ["<C-Space>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
+      ["<Esc>"] = {
+        function(cmp)
+          if cmp.is_menu_visible() then
+            cmp.hide()
+            return true
+          end
+          return false
+        end,
+        "fallback",
+      },
     },
     appearance = {
       nerd_font_variant = "mono",

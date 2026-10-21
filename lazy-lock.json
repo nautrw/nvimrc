@@ -23,6 +23,7 @@
   "nvim-treesitter": { "branch": "main", "commit": "29212d826054bb2948fa9d3a99eca9bf6a050eb2" },
   "oil.nvim": { "branch": "master", "commit": "d3733d933833a0e59b813ecec99341527adf0c28" },
   "real-icons.nvim": { "branch": "main", "commit": "a1b8dbec6503ee569f2e574e7b3c1ad33ce5dcde" },
+  "smart-newline.nvim": { "branch": "main", "commit": "fb977ab7e295095c403da4e215650747acf69e0a" },
   "smart-paste.nvim": { "branch": "main", "commit": "dc70a09bd61266744526557944c5f0b084f0f4f8" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "vim-sleuth": { "branch": "master", "commit": "be69bff86754b1aa5adcbb527d7fcd1635a84080" },
