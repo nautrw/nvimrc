@@ -18,13 +18,14 @@ return {
       preset = "super-tab",
       ["<C-Space>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
       ["<Esc>"] = {
-        function(cmp)
-          if cmp.is_menu_visible() then
-            cmp.hide()
-            return true
-          end
-          return false
-        end,
+        -- function(cmp)
+        --   if cmp.is_menu_visible() then
+        --     cmp.hide()
+        --     return true
+        --   end
+        --   return false
+        -- end,
+        "hide",
         "fallback",
       },
     },
