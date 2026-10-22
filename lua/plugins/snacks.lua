@@ -112,13 +112,18 @@ return {
       },
     },
     quickfile = { enabled = true },
-    scope = { enabled = true },
+    scope = {
+      enabled = true,
+      treesitter = {
+        enabled = true,
+      },
+    },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
     styles = {
       notification = {
-        -- wo = { wrap = true } -- Wrap notifications
+        wo = { wrap = true } -- Wrap notifications
       },
     },
     terminal = {
@@ -195,7 +200,6 @@ return {
     { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
     { "<leader>sR", function() Snacks.picker.resume() end, desc = "Resume" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
-    { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
     -- LSP
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
@@ -213,13 +217,13 @@ return {
     { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
+    { "<leader>uC", function() require("pickers.colorscheme_picker").picker() end, desc = "Colorscheme Picker" },
 
     { "<c-`>", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     { "<c-ESC>", [[<C-\><C-n>]], desc = "Exit to normal mode", mode = "t" },
 
     { "]]", function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
     { "[[", function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
-    { "<leader>th", function() require("pickers.colorscheme_picker").picker() end, desc = "Colorscheme Picker" },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
