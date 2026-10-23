@@ -1,8 +1,6 @@
 return {
   "stevearc/oil.nvim",
   lazy = true,
-  ---@module 'oil'
-  ---@type oil.SetupOpts
   dependencies = { "nautrw/real-icons.nvim" },
   cmd = "Oil",
   keys = {
