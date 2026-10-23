@@ -1,9 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
-    },
     event = { "BufReadPost", "BufNewFile" },
     build = ":TSUpdate",
     config = function()
@@ -47,58 +44,170 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     branch = "main",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = {
+      -- Select textobjects
+      {
+        "af",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around function",
+      },
+      {
+        "if",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside function",
+      },
+      {
+        "ac",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@class.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around class",
+      },
+      {
+        "ic",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@class.inner", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside class",
+      },
+      {
+        "ab",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@block.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around block",
+      },
+      {
+        "ib",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@block.inner", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside block",
+      },
+      {
+        "al",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@loop.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around loop",
+      },
+      {
+        "il",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@loop.inner", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside loop",
+      },
+      {
+        "a/",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@comment.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around comment",
+      },
+      {
+        "i/",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@comment.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside comment",
+      },
+      {
+        "aa",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@parameter.outer", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Around parameter",
+      },
+      {
+        "ia",
+        function() require("nvim-treesitter-textobjects.select").select_textobject("@parameter.inner", "textobjects") end,
+        mode = { "x", "o" },
+        desc = "Inside parameter",
+      },
+
+      -- Move between textobjects
+      {
+        "]m",
+        function() require("nvim-treesitter-textobjects.move").goto_next_start("@function.outer", "textobjects") end,
+        desc = "Next function",
+      },
+      {
+        "]M",
+        function() require("nvim-treesitter-textobjects.move").goto_next_end("@function.outer", "textobjects") end,
+        desc = "End of next function",
+      },
+      {
+        "[m",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_start("@function.outer", "textobjects") end,
+        desc = "Previous function",
+      },
+      {
+        "[M",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_end("@function.outer", "textobjects") end,
+        desc = "End of previous function",
+      },
+
+      {
+        "]]",
+        function() require("nvim-treesitter-textobjects.move").goto_next_start("@class.outer", "textobjects") end,
+        desc = "Next class",
+      },
+      {
+        "][",
+        function() require("nvim-treesitter-textobjects.move").goto_next_end("@class.outer", "textobjects") end,
+        desc = "End of next class",
+      },
+      {
+        "[[",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_start("@class.outer", "textobjects") end,
+        desc = "Previous class",
+      },
+      {
+        "[]",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_end("@class.outer", "textobjects") end,
+        desc = "End of previous class",
+      },
+
+      {
+        "]b",
+        function() require("nvim-treesitter-textobjects.move").goto_next_start("@block.outer", "textobjects") end,
+        desc = "Next block",
+      },
+      {
+        "]B",
+        function() require("nvim-treesitter-textobjects.move").goto_next_end("@block.outer", "textobjects") end,
+        desc = "End of next block",
+      },
+      {
+        "[b",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_start("@block.outer", "textobjects") end,
+        desc = "Previous block",
+      },
+      {
+        "[B",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_end("@block.outer", "textobjects") end,
+        desc = "End of previous block",
+      },
+
+      {
+        "]a",
+        function() require("nvim-treesitter-textobjects.move").goto_next_start("@parameter.inner", "textobjects") end,
+        desc = "Next parameter",
+      },
+      {
+        "]A",
+        function() require("nvim-treesitter-textobjects.move").goto_next_end("@parameter.inner", "textobjects") end,
+        desc = "End of next parameter",
+      },
+      {
+        "[a",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_start("@parameter.inner", "textobjects") end,
+        desc = "Previous parameter",
+      },
+      {
+        "[A",
+        function() require("nvim-treesitter-textobjects.move").goto_previous_end("@parameter.inner", "textobjects") end,
+        desc = "End of previous parameter",
+      },
+    },
     opts = {
-      textobjects = {
-        move = {
-          enable = true,
-          set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = {
-            ["]m"] = "@function.outer",
-            ["gj"] = "@function.outer",
-            ["]]"] = "@class.outer",
-            ["]b"] = "@block.outer",
-            ["]a"] = "@parameter.inner",
-          },
-          goto_next_end = {
-            ["]M"] = "@function.outer",
-            ["gJ"] = "@function.outer",
-            ["]["] = "@class.outer",
-            ["]B"] = "@block.outer",
-            ["]A"] = "@parameter.inner",
-          },
-          goto_previous_start = {
-            ["[m"] = "@function.outer",
-            ["gk"] = "@function.outer",
-            ["[["] = "@class.outer",
-            ["[b"] = "@block.outer",
-            ["[a"] = "@parameter.inner",
-          },
-          goto_previous_end = {
-            ["[M"] = "@function.outer",
-            ["gK"] = "@function.outer",
-            ["[]"] = "@class.outer",
-            ["[B"] = "@block.outer",
-            ["[A"] = "@parameter.inner",
-          },
-        },
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-            ["ab"] = "@block.outer",
-            ["ib"] = "@block.inner",
-            ["al"] = "@loop.outer",
-            ["il"] = "@loop.inner",
-            ["a/"] = "@comment.outer",
-            ["i/"] = "@comment.outer", -- no inner for comment
-            ["aa"] = "@parameter.outer", -- parameter -> argument
-            ["ia"] = "@parameter.inner",
-          },
-        },
+      select = {
+        lookahead = true,
       },
     },
   },
