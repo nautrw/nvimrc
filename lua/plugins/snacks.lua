@@ -217,7 +217,7 @@ return {
     { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-    { "<leader>uC", function() require("pickers.colorscheme_picker").picker() end, desc = "Colorscheme Picker" },
+    { "<leader>uc", function() require("pickers.colorscheme_picker").picker() end, desc = "Colorscheme Picker" },
 
     { "<c-`>", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     { "<c-ESC>", [[<C-\><C-n>]], desc = "Exit to normal mode", mode = "t" },
