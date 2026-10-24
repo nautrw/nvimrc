@@ -11,6 +11,7 @@ return {
       sh = { "shfmt" },
       bash = { "shfmt" },
       zsh = { "shfmt" },
+      cs = { "csharpier" }
     },
     notify_on_error = true,
   },
