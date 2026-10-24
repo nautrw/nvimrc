@@ -1,9 +1,5 @@
 return {
   {
-    "j-hui/fidget.nvim",
-    opts = {}
-  },
-  {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     -- event = "User FilePost",
@@ -11,7 +7,6 @@ return {
     -- lazy = false,
     dependencies = {
       { "mason-org/mason-lspconfig.nvim" },
-      { "j-hui/fidget.nvim", opts = {} },
     },
     config = function()
       vim.diagnostic.config {
