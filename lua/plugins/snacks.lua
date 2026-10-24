@@ -1,21 +1,10 @@
 local headers = { -- NO LIMIT TO THE LARP!!!!
   -- tuff
-  "SIC PRAVIS MAGNA",
-  "DUM SPIRO, SPERO",
   "PLUS ULTRA",
   "NE PLUS ULTRA",
   "PLUS ULTRA AD GLORIAM",
   "AD GLORIAM",
-  "NIL DESPERANDUM",
-  "ALEA IACTA EST",
   "AD ASTRA",
-  "χαλεπὰ τὰ καλά",
-  "γίγνου ὃς εἶ",
-  "ἡ τύχη τοῖς θαρροῦσιν",
-  "γίγνου ὃς εἶ",
-  "ἓν οἶδα ὅτι οὐδὲν οἶδα",
-  "ὁ βίος βραχύς",
-  "ἀρχὴ ἥμισυ παντός",
   -- jokes
   "ET TU, LSP?",
   "six seven!",
