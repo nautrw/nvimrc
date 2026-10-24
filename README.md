@@ -1,5 +1,10 @@
 # NvimRC
 My customized and overengineered Neovim configuration.
+
+
+https://github.com/user-attachments/assets/780ea169-912b-4818-b67f-bfc696e0e1bd
+
+
 # Instlalation
 **This configuration is only verified to work on Linux**
 To get started, run the following command:
