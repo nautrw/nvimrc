@@ -31,6 +31,8 @@ return {
         "clang-format",
         "codelldb",
         "shfmt",
+        "csharpier",
+        "roslyn-language-server"
       },
     },
   },
