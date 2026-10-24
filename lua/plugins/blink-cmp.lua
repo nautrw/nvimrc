@@ -43,15 +43,11 @@ return {
         },
       },
     },
+    snippets = {
+      preset = "luasnip"
+    },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
-      providers = {
-        snippets = {
-          opts = {
-            use_show_condition = false,
-          }
-        }
-      }
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
   },
