@@ -60,3 +60,6 @@ vim.keymap.set('n', '<leader>mc', function()
     -1
   )
 end, { desc = 'Clear multicursors' })
+
+-- clear highlights from search
+vim.keymap.set('n', '<ESC>', '<cmd>nohl<CR>', {silent = true})
