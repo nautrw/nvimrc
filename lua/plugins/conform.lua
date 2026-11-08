@@ -11,6 +11,7 @@ return {
       sh = { "shfmt" },
       bash = { "shfmt" },
       zsh = { "shfmt" },
+      json = {"fixjson"},
       -- ASP.NET runtime must be installed to use csharpier
       -- sudo pacman -S aspnet-runtime-10.0
       cs = { "csharpier" },
