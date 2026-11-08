@@ -36,13 +36,6 @@ return {
           "seleme.yml",
         },
       })
-
-      vim.lsp.config("qmlls", {
-        cmd = { "qmlls", "-E" },
-        filetypes = { "qml", "qmljs" },
-        root_markers = { ".qmlls.ini", ".git" },
-        single_file_support = true,
-      })
     end,
     keys = {
       { "<leader>df", vim.diagnostic.open_float, desc = "Show Line Diagnostics" },
