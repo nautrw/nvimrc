@@ -32,7 +32,8 @@ return {
         "codelldb",
         "shfmt",
         "csharpier",
-        "roslyn-language-server"
+        "roslyn-language-server",
+        "shuck",
       },
     },
   },
