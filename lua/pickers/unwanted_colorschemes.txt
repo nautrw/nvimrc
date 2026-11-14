@@ -34,3 +34,11 @@ pablo
 murphy
 morning
 slate
+zacess-cream
+zacess-deep-contrast-light
+zacess-high-contrast-light
+zacess-deep-contrast-dark
+zacess-high-contrast-dark
+zacess-light
+zacess-warm-light
+zacess-yellow-on-black
